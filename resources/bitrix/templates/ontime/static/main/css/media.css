@@ -1,0 +1,641 @@
+@media (max-width: 1199px) {
+  #header .holder{
+    padding: 0 15px; 
+  }
+  .logo{
+    left: 15px; 
+  }
+  #header.fixed .logo{
+    left: -23px;
+  }
+  .nav-opener{
+    padding: 0 0 0 195px; 
+  }
+  .nav-opener .phone{
+    margin: 0; 
+  }
+  .promo .description{
+    padding: 277px 15px 0; 
+  }
+  .tariff .holder > ul{
+    margin: 0; 
+  }
+  .about-company ul{
+    margin: 0 -5px; 
+  }
+  .aside .logo{
+    left: -15px; 
+  }
+  #footer .holder{
+    padding: 0 15px; 
+  }
+  #footer span{
+    margin: 0 0 0 30px; 
+  } 
+}
+@media (max-width: 1169px) {
+  h2{
+    font-size: 70px; 
+  }
+  .holder{
+    padding: 0 15px; 
+  }
+  .nav-opener{
+    padding: 0 0 0 206px; 
+  }
+  .nav-opener .phone{
+    width: 150px; 
+  }
+  .phone a{
+    font-size: 25px; 
+  }
+  .top-nav{
+    padding: 24px 0; 
+  }
+  .top-nav li{
+    width: 30%;
+    margin: 0 10px 6px 0; 
+  }
+  #nav{
+    font-size: 19px; 
+  }
+  #nav li{
+    margin: 0 15px 0 0; 
+  }
+  .promo .description{
+    padding: 277px 0 0; 
+  }
+  .tariff .holder > ul,
+  .about-company ul{
+    margin: 0 -15px; 
+  }
+  .tariff .title{
+    padding: 17px 29px; 
+  }
+  .about-company li{
+    padding: 0 15px 30px; 
+  }
+  .aside .holder{
+    padding: 0 15px 0 301px; 
+  }
+  .services-view{
+    padding: 220px 134px 0; 
+  }
+  .services-view li{
+    max-width: 340px; 
+  }
+  .services-view .text{
+    opacity: 1;
+  }
+  .services-view li:nth-child(1){
+    bottom: auto;
+    top: 30px;
+    left: 50px;
+    width: auto; 
+  }
+  .services-view li:nth-child(2){
+    top: 95px;
+    left: 50px;
+    width: auto;
+    text-align: left; 
+  }
+  .services-view li:nth-child(3){
+    top: 150px;
+    left: 50px;
+    width: 310px; 
+  }
+  .services-view li:nth-child(4){
+    right: 50px;
+    top: 150px;
+    width: 210px; 
+  }
+  .services-view li:nth-child(5){
+    bottom: auto;
+    top: 95px;
+    right: 50px;
+    width: auto; 
+  }
+  .services-view li:nth-child(6){
+    bottom: auto;
+    top: 30px;
+    right: 50px;
+    width: auto; 
+  }
+  .services-view li:nth-child(1) .num{
+    bottom: -9px;
+    left: -50px; 
+  }
+  .services-view li:nth-child(2) .num{
+    top: -9px;
+    left: -50px; 
+  }
+  .services-view li:nth-child(3) .num{
+    left: -50px;
+    top: 1px; 
+  }
+  .services-view li:nth-child(4) .num{
+    left: auto;
+    right: -50px;
+    top: 1px; 
+  }
+  .services-view li:nth-child(5) .num{
+    top: -9px;
+    left: auto;
+    right: -50px; 
+  }
+  .services-view li:nth-child(6) .num{
+    top: -9px;
+    left: auto;
+    right: -50px; 
+  } 
+}
+@media (max-width: 1023px) {
+  h2{
+    font-size: 50px; 
+  }
+  h4{
+    font-size: 35px; 
+  }
+  h5{
+    font-size: 25px; 
+  }
+  .btn{
+    padding: 15px 10px; 
+  }
+  .logo,
+  .aside .logo{
+    background-size: 80%;
+    background-position: 12px 11px;
+    height: 70px;
+    width: 80px;
+    top: 0;
+  }
+  .logo a:before,
+  .aside .logo a:before{
+    background-size: 66.15%;
+    height: 34px;
+    top: 11px;
+    left: 23px;
+  }
+  .aside .logo a:before{
+    background-size: 68%; 
+  }
+  .logo a:after{
+    border-width: 36.5px 0 34.5px 13px;
+    right: -13px;
+  }
+  .logo span,
+  .aside .logo span{
+    width: 17px;
+    left: 20px;
+    top: 14px;
+  }
+  .logo a:hover:before,
+  .aside .logo a:hover:before{
+    left: 37px;
+  }
+  #nav, 
+  .top-nav,
+  .nav-opener .phone{
+    float: none;
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+  }
+  #nav li{
+    margin: 0; 
+  }
+  .nav-opener .phone a{
+    padding: 0;
+  }
+  .nav-opener .phone .auth-user{
+    padding: 0 0 0 33px;
+    margin: 0 0 15px;
+  }
+  .nav-opener{
+    padding: 0;
+  }
+  .nav-opener .mob-btn{
+    display: block;
+    right: 15px;
+    top: 50px;
+  }
+  .nav-opener{
+    float: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 120px 0 10px;
+  }
+  .nav-opener ul{
+    display: none;
+    float: none;
+  }
+  .nav-opener.active{
+    background: #1c1c1d;
+    font-size: 34px;
+    text-transform: none;
+  }
+  .nav-opener.active ul{
+    display: block;
+    z-index: 3;
+  }
+  .nav-opener li{
+    float: none;
+    display: block;
+    margin: 0;
+  }
+  .nav-opener a{
+    padding: 10px 15px;
+  }
+  .nav-opener .phone li:first-child{
+    width: 100%;
+    margin: 0; 
+  }
+  .nav-opener .phone li{
+    width: 50%;
+    float: left;
+    padding: 10px 15px; 
+  }
+  .phone{
+    overflow: hidden;
+  }
+  .phone li{
+    float: left;
+    text-transform: uppercase;
+  }
+  .phone a{
+    width: 150px;
+  }
+  .top-nav{
+    padding: 20px 0; 
+  }
+  .top-nav li{
+    width: 100%; 
+  }
+  .promo-container{
+    min-height: 600px;
+  }
+  .promo .description{
+    padding: 180px 0 0; 
+  }
+  .promo:after{
+    height: 80px; 
+  }
+  .tariff{
+    padding: 50px 0 12px; 
+  }
+  .tariff .title{
+    max-width: 100%;
+    margin: 0 0 50px -25px;
+    padding: 17px 40px; 
+  }
+  .tariff .title .text{
+    width: 100%; 
+  }
+  .tariff .holder > ul,
+  .about-company ul{
+    margin: 0 -10px; 
+  }
+  .tariff .holder > ul > li{
+    padding: 0 10px 20px; 
+  }
+  .tariff .box{
+    padding: 100px 0 15px; 
+  }
+  .tariff li:first-child .box img{
+    width: auto; 
+  }
+  .tariff .box img{
+    width: 70px; 
+  }
+  .tariff .box .loader{
+    bottom: auto;
+    top: 20px;
+    left: 50%;
+    margin: 0 0 0 -20px; 
+  }
+  .tariff li:first-child .box ul{
+    padding: 0; 
+  }
+  .tariff .box:first-child li a:last-child{
+    display: none;
+  }
+  .tariff p{
+    margin: 0 0 10px; 
+  }
+  .tariff .box strong{
+    font-size: 62px; 
+  }
+  .services{
+    padding: 29px 0 35px; 
+  }
+  #show + p{
+    margin: 0 0 50px; 
+  }
+  .about-company{
+    padding: 35px 0 33px; 
+  }
+  .about-company li{
+    padding: 0 10px 15px; 
+  }
+  .aside .holder{
+    padding: 0 15px 0 160px; 
+  }
+  .aside .logo{
+    left: 15px;
+    top: 13px; 
+  }
+  .nav-menu{
+    font-size: 17px; 
+  }
+  .nav-menu li{
+    margin: 0 15px 0 0; 
+  }
+  .btn-scroll{
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  body,
+  p{
+    font-size: 16px; 
+  }
+  h2{
+    font-size: 40px; 
+  }
+  h3{
+    font-size: 30px; 
+  }
+  h4{
+    font-size: 25px; 
+  }
+  .btn{
+    font-size: 18px;
+    padding: 10px; 
+  }
+  .logo{
+    background-size: 65%;
+    height: 61px;
+  }
+  .logo a:before{
+    background-size: 55%;
+  }
+  .logo a:after{
+    border-width: 30.5px 0 31.5px 13px;
+  }
+  .logo span{
+    width: 16px;
+    top: 13px;
+  }
+  .logo a:hover:before{
+    left: 37px;
+  }
+  .phone{
+    font-size: 12px;
+  }
+  .phone li{
+    padding: 5px;
+  }
+  .phone a{
+    font-size: 20px;
+  }
+  .nav-opener{
+    padding: 105px 0 10px;
+  }
+  .nav-opener a{
+    padding: 6px 15px;
+  }
+  .nav-opener .mob-btn{
+    top: 45px; 
+  }
+  .nav-opener .phone li{
+    padding: 5px 15px;
+  }
+  .top-nav{
+    padding: 10px 0; 
+  }
+  .promo-container{
+    min-height: 560px;
+  }
+  .promo-container:after{
+    background-size: 80%;
+    left: 43%; 
+  }
+  .promo{
+    font-size: 12px; 
+  }
+  .promo:after {
+    height: 72px;
+  }
+  .promo h2{
+    margin: 0 0 20px; 
+  }
+  span.rubl{
+    font-size: 16px; 
+  }
+  .tariff{
+    padding: 20px 0 0; 
+  }
+  .tariff .holder > ul,
+  .about-company ul{
+    margin: 0; 
+  }
+  .tariff .holder > ul > li{
+    width: 100%;
+    padding: 0 0 30px; 
+  }
+  .tariff .holder > ul > li:last-child{
+    padding: 0 0 10px; 
+  }
+  .tariff .title{
+    margin: 0 0 20px -25px; 
+  }
+  .tariff .box{
+    padding: 70px 0 15px; 
+  }
+  .tariff li:first-child .box{
+    padding: 100px 0 15px; 
+  }
+  .tariff .box img{
+    width: 55px;
+    top: -12px;
+    left: 45%; 
+  }
+  .tariff .box strong{
+    font-size: 52px; 
+  }
+  .gallery-cover{
+    margin: 0;
+  }
+  .gallery li{
+    padding: 0;
+  }
+  .gallery img{
+    height: auto;
+    max-width: 100%;
+  }
+  .gallery .description{
+    width: auto;
+    padding: 20px 40% 20px 15px;
+  }
+  .gallery .description strong{
+    font-size: 23px;
+  }
+  .gallery .description p{
+    max-height: 125px;
+    overflow: hidden;
+  }
+  .bx-controls-direction{
+    margin: 0 0 0 -1100px;
+  }
+  #show{
+    font-size: 18px;
+    padding: 0; 
+  }
+  #show + p{
+    margin: 0 0 40px; 
+  }
+  .services{
+    padding: 25px 0 20px; 
+  }
+  .services-view{
+    padding: 0; 
+  }
+  .services-view img{
+    width: 819px;
+    margin: 20px 0; 
+  }
+  .services-view .num{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px; 
+  }
+  .services-view li{
+    max-width: 100%;
+    position: relative; 
+  }
+  .services-view li:nth-child(1),
+  .services-view li:nth-child(2),
+  .services-view li:nth-child(3),
+  .services-view li:nth-child(4),
+  .services-view li:nth-child(5),
+  .services-view li:nth-child(6){
+    top: 0;
+    left: 0;
+    right: auto;
+    text-align: left;
+    padding: 0 0 20px 40px;
+    width: auto; 
+  }
+  .services-view li:nth-child(1) .num,
+  .services-view li:nth-child(2) .num,
+  .services-view li:nth-child(3) .num,
+  .services-view li:nth-child(4) .num,
+  .services-view li:nth-child(5) .num,
+  .services-view li:nth-child(6) .num{
+    left: 0;
+    bottom: auto;
+    top: -3px; 
+  }
+  .about-company li{
+    width: 100%;
+    padding: 0 0 15px; 
+  }
+  .aside{
+    padding: 10px 0; 
+  }
+  .aside .logo{
+    display: none;
+  }
+  .aside .holder{
+    padding: 0 15px;
+  }
+  .nav-menu{
+    display: none;
+  }
+  .aside .phone li{
+    margin: 0;
+  }
+  #footer{
+    padding: 10px 0 8px;
+  }
+  #footer span{
+    margin: 0 0 5px;
+    float: none;
+    display: block;
+  }
+}
+@media (max-width: 479px) {
+  h2{
+    font-size: 25px; 
+  }
+  h3{
+    font-size: 25px;
+  }
+  h4{
+    font-size: 21px;
+  }
+  .btn{
+    padding: 8px;
+    margin: 20px 0; 
+  }
+  .promo-container{
+    padding: 0 0 22px;
+    min-height: 430px;
+  }
+  .promo-container:after{
+    background-size: 70%;
+    left: 40%;
+    height: 22px;
+  }
+  .promo .description{
+    padding: 120px 0 0; 
+  }
+  .gallery .description{
+    font-size: 15px;
+    padding: 10px 40% 0 15px;
+  }
+  .gallery .description strong{
+    font-size: 16px;
+  }
+  .gallery .description p{
+    font-size: 14px;
+    line-height: 1;
+    max-height: 42px;
+  }
+  .tariff .box strong{
+    padding: 6px 0 0;
+  }
+  .services{
+    padding: 25px 0 10px;
+  }
+  .about-company {
+    padding: 25px 0 20px;
+  }
+  .aside .holder{
+    padding: 0 15px;
+  }
+  .aside .logo{
+    left: 50%;
+    margin: 0 0 0 -45px;
+  }
+  .nav-menu{
+    padding: 65px 0 0;
+    font-size: 14px;
+  }
+  .aside .phone li{
+    width: 145px;
+  }
+  #footer,
+  #footer p{
+    font-size: 14px;
+    line-height: 18px;
+  }
+  #footer span{
+    margin: 0 0 10px;
+  }
+}

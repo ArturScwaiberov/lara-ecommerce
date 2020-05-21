@@ -1,0 +1,289 @@
+/**
+ * Created by Laco.
+ * @author: Konstantin Mokhov (HtmlMak)
+ * Date: 29.06.2015
+ * Time: 17:10
+ */
+
+/*global noty, $, globalReady, self*/
+var app, components;
+
+/**
+ *
+ * @type {{DEBUG: boolean, jQueryVersion: string, componentsPath: string, timer: number, pageInit: Function, dependencies: {}, apply: Function, load: Function, showServerError: Function, generateNotification: Function, hasElementInArray: Function, getResolution: Function, log: Function, overlay: {show: Function, hide: Function, remove: Function}, state: {createdOverlay: boolean}}}
+ */
+app = {
+    'DEBUG'         : true,
+    'jQueryVersion' : '2.1.4',
+    'componentsPath': '/client_side/components/',
+    'timer'         : 0,
+    'document'      : $(document.body),
+    'pageInit'      : function () {
+        "use strict";
+        app.document.addClass('app');
+        app.apply(app.elementsApp);
+        globalReady();
+    },
+
+    'dependencies': {},
+
+    /**
+     * Перебирает элементы массива и применяет к ним функции
+     */
+    'apply': function () {
+        "use strict";
+        var i = 0;
+        for (i; i < app.componentsCollection.length; i++) {
+            try {
+                eval(app.componentsCollection[i])();
+            } catch (err) {
+                app.log(err);
+            }
+        }
+    },
+    /** DOM загружен */
+    "load" : function () {
+        "use strict";
+        app.componentsCollection = [];
+        app.components = [];
+        components.getComponents();
+        app.pageInit();
+    },
+
+    /** Показ ошибок от сервера */
+    "showServerError": function (code) {
+        "use strict";
+
+        var message = '';
+        switch (code) {
+            case 403:
+                message = 'У нас нет прав на просмотр этой страницы. [403]';
+                break;
+            case 404:
+                message = 'Не удалось найти страницу. [404]';
+                break;
+            case 500:
+                message = 'Сервер не смог обработать запрос. Попробуйте еще раз. [500]';
+                break;
+            default:
+                message = 'Произошла ошибка. Обновите страницу [Код 0]';
+        }
+
+        app.generateNotification(message);
+    },
+
+    /**
+     * Генерация сообщений
+     * @param message - текст сообщения
+     * @param type! - тип
+     */
+    "generateNotification": function (message, type) {
+        "use strict";
+
+        type = type || 'error';
+        noty({
+            text     : message,
+            type     : type,
+            layout   : 'topRight',
+            theme    : 'relax',
+            timeout  : 10000,
+            animation: {
+                open : 'animated flipInX',
+                close: 'animated flipOutX',
+                speed: 250
+            }
+        });
+    },
+
+    /**
+     * Проверяет наличие ключа в массиве
+     *
+     * @param key {string}
+     * @param arr {Array}
+     * @return {boolean} - true, если в массиве (arr) есть ключ (key)
+     */
+    "hasElementInArray": function (key, arr) {
+        "use strict";
+        var i = 0;
+        for (i; i < arr.length; i++) {
+            if (arr[i] === key) {
+                return true;
+            }
+        }
+        return false;
+    },
+
+    "getResolution": function () {
+        "use strict";
+
+        app.resolution = {
+            width : self.innerWidth,
+            height: self.innerHeight
+        };
+
+        if (app.resolution.width <= 480) {
+            return 480;
+        } else if (app.resolution.width <= 720) {
+            return 720;
+        } else if (app.resolution.width <= 1024) {
+            return 1024;
+        } else if (app.resolution.width <= 1366) {
+            return 1366;
+        } else {
+            return 1920;
+        }
+    },
+
+    /**
+     * Логирует данные
+     * @param message
+     * @param time= {boolean} - флаг, указывающий выводить время или нет
+     * @param functionName= {string} - имя функции, которая вызвала логирование
+     * @returns {string}
+     */
+    'log': function (message, time, functionName) {
+        "use strict";
+        var result = null;
+        if (app.DEBUG) {
+            try {
+                var temp = arguments;
+                functionName = functionName || (temp.callee.caller !== null && temp.callee.caller.name);
+            } catch (err) {
+                functionName = false;
+            }
+            if (functionName) {
+                message += ' [' + functionName + ']';
+            }
+            if (time) {
+                message = message + ' [' + app.timer / 1000 + ' s]';
+            }
+            if (console) {
+                console.log(message);
+            } else {
+                alert(message);
+            }
+            result = message;
+        } else {
+            result = 'Логирование выключено';
+        }
+        return result;
+    },
+
+    'overlay': {
+        /**
+         * Показывает оверлей и создаёт его, если нет
+         */
+        'show': function () {
+            "use strict";
+            if (!app.state.createdOverlay) {
+                app.state.overlay = $('<div/>', {
+                    'class': 'app__overlay',
+                    'id'   : 'app__overlay'
+                }).appendTo(app.document);
+                app.state.createdOverlay = true;
+            }
+            app.state.overlay
+                .addClass('app__overlay--state-open')
+                .on('click.overlay', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    app.overlay.hide();
+                });
+            app.document.trigger('app.openOverlay');
+        },
+
+        /**
+         * Скрывает оверлей
+         */
+        'hide': function () {
+            "use strict";
+            app.state.overlay
+                .removeClass('app__overlay--state-open')
+                .off('click.overlay');
+            app.document.trigger('app.closeOverlay');
+        },
+
+        /**
+         * Удаляет оверлей
+         */
+        'remove': function () {
+            "use strict";
+            app.state.overlay.remove();
+        }
+    },
+
+
+    'state': {
+        createdOverlay: false
+    }
+};
+
+if (app.DEBUG) {
+    app.timeInterval = setInterval(function () {
+        "use strict";
+        app.timer += 10;
+    }, 10);
+}
+
+
+components = {
+    /** Получаем массив компонентов */
+    'getComponents': function (node) {
+        "use strict";
+
+        if (node !== null) {
+            node = node || document;
+            app.elementsAppCollection = node.getElementsByTagName('*');
+            app.elementsApp = [];
+
+            /** Перебор элементов коллекции и проверка на существование параметра data-role */
+            var iteration = 0,
+                hasInCollection = null,
+                role = null,
+                components = null;
+            for (iteration; iteration < app.elementsAppCollection.length; iteration++) {
+                if (app.elementsAppCollection[iteration].hasAttribute('data-role')) {
+                    /** Компенент не является вспомогательным */
+                    hasInCollection = false;
+                    role = app.elementsAppCollection[iteration].getAttribute('data-role');
+                    components = 0;
+
+                    app.elementsApp.push(app.elementsAppCollection[iteration]);
+
+                    /** Добавление нового компонента в массив app.componentsCollection */
+                    role.replace(/\s+/g, '').split(',').forEach(function (item) {
+                        if (!app.hasElementInArray(item, app.componentsCollection)) {
+                            app.componentsCollection.push(item);
+
+                            /**  Проверка наличия зависистей компонента */
+                            if (item in app.dependencies) {
+                                var dependencies = 0;
+                                for (dependencies; dependencies < app.dependencies[role].length; dependencies++) {
+                                    hasInCollection = false;
+
+                                    /** Проверка на наличие зависимости компонента в массиве app.componentsCollection */
+                                    for (components = 0; components < app.componentsCollection.length; components++) {
+                                        if (app.componentsCollection[components] === app.dependencies[item][dependencies]) {
+                                            hasInCollection = true;
+                                            break;
+                                        }
+                                    }
+
+                                    /** Добавление нового компонента в массив app.componentsCollection */
+                                    if (!hasInCollection) {
+                                        app.componentsCollection.push(app.dependencies[item][dependencies]);
+                                    }
+                                }
+                            }
+                            return false;
+                        }
+                    });
+                }
+            }
+
+            return app.componentsCollection;
+        }
+    }
+};
+
+document.onload = app.load();

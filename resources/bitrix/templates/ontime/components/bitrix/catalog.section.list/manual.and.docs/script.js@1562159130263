@@ -1,0 +1,7 @@
+$(document).ready(function ()
+{
+	$('ul.tabs').on('click', 'li:not(.current)', function()
+	{
+		$(this).addClass('current').siblings().removeClass('current').parents('.tabs-block').find('.box').eq($(this).index()).fadeIn(500).siblings('.box').hide();
+	});
+});

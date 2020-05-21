@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'neuronregular';
+    src: url('neuron-webfont.eot');
+    src: url('neuron-webfont.eot@') format('embedded-opentype'),
+         url('neuron-webfont.woff') format('woff'),
+         url('neuron-webfont.ttf') format('truetype'),
+         url('neuron-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronblack';
+    src: url('neuron-black-webfont.eot');
+    src: url('neuron-black-webfont.eot@') format('embedded-opentype'),
+         url('neuron-black-webfont.woff') format('woff'),
+         url('neuron-black-webfont.ttf') format('truetype'),
+         url('neuron-black-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronblack_italic';
+    src: url('neuron-blackitalic-webfont.eot');
+    src: url('neuron-blackitalic-webfont.eot@') format('embedded-opentype'),
+         url('neuron-blackitalic-webfont.woff') format('woff'),
+         url('neuron-blackitalic-webfont.ttf') format('truetype'),
+         url('neuron-blackitalic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronbold';
+    src: url('neuron-bold-webfont.eot');
+    src: url('neuron-bold-webfont.eot@') format('embedded-opentype'),
+         url('neuron-bold-webfont.woff') format('woff'),
+         url('neuron-bold-webfont.ttf') format('truetype'),
+         url('neuron-bold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronbold_italic';
+    src: url('neuron-bolditalic-webfont.eot');
+    src: url('neuron-bolditalic-webfont.eot@') format('embedded-opentype'),
+         url('neuron-bolditalic-webfont.woff') format('woff'),
+         url('neuron-bolditalic-webfont.ttf') format('truetype'),
+         url('neuron-bolditalic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neurondemibold';
+    src: url('neuron-demibold-webfont.eot');
+    src: url('neuron-demibold-webfont.eot@') format('embedded-opentype'),
+         url('neuron-demibold-webfont.woff') format('woff'),
+         url('neuron-demibold-webfont.ttf') format('truetype'),
+         url('neuron-demibold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neurondemibold_italic';
+    src: url('neuron-demibolditalic-webfont.eot');
+    src: url('neuron-demibolditalic-webfont.eot@') format('embedded-opentype'),
+         url('neuron-demibolditalic-webfont.woff') format('woff'),
+         url('neuron-demibolditalic-webfont.ttf') format('truetype'),
+         url('neuron-demibolditalic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronextrabold';
+    src: url('neuron-extrabold-webfont.eot');
+    src: url('neuron-extrabold-webfont.eot@') format('embedded-opentype'),
+         url('neuron-extrabold-webfont.woff') format('woff'),
+         url('neuron-extrabold-webfont.ttf') format('truetype'),
+         url('neuron-extrabold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronextrabold_italic';
+    src: url('neuron-extrabolditalic-webfont.eot');
+    src: url('neuron-extrabolditalic-webfont.eot@') format('embedded-opentype'),
+         url('neuron-extrabolditalic-webfont.woff') format('woff'),
+         url('neuron-extrabolditalic-webfont.ttf') format('truetype'),
+         url('neuron-extrabolditalic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronextralight';
+    src: url('neuron-extralight-webfont.eot');
+    src: url('neuron-extralight-webfont.eot@') format('embedded-opentype'),
+         url('neuron-extralight-webfont.woff') format('woff'),
+         url('neuron-extralight-webfont.ttf') format('truetype'),
+         url('neuron-extralight-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronextralight_italic';
+    src: url('neuron-extralightitalic-webfont.eot');
+    src: url('neuron-extralightitalic-webfont.eot@') format('embedded-opentype'),
+         url('neuron-extralightitalic-webfont.woff') format('woff'),
+         url('neuron-extralightitalic-webfont.ttf') format('truetype'),
+         url('neuron-extralightitalic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'neuronheavy';
+    src: url('neuron-heavy-webfont.eot');
+    src: url('neuron-heavy-webfont.eot@') format('embedded-opentype'),
+         url('neuron-heavy-webfont.woff') format('woff'),
+         url('neuron-heavy-webfont.ttf') format('truetype'),
+         url('neuron-heavy-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,93 @@
+$(document).ready(function(){
+			initAnimateMap();
+			initShowBlock();
+
+			initOpenPopup();
+			/*add 21.07.2017*/
+			$('.form__elements button').click(function(){
+				if(!$(this).parents('.form__elements').find('input[type="checkbox"]').prop("checked"))
+				{
+					alert('Для отправки формы Вы должны дать согласие на обработку персональных данных.');
+					return false;
+				}
+			});
+
+			initScroll();
+			
+});
+
+function initScroll(){
+	$('.open-drop').click(function(){
+		$('body,html').animate({scrollTop:$('.branch-block').offset().top - 80},1000);
+		return false;
+	});
+}
+
+function initOpenPopup(){
+	$('[data-popup]').click(function (e) {
+		if(!$(e.target).is(':submit')){
+			var id = $(this).data('popup');
+			$(id).toggleClass('active');
+			e.preventDefault();
+		}
+	});
+	$(document).on('click',function(e) {
+		if ($(e.target).closest('.popup-holder').length || $(e.target).closest('[data-popup]').length) return;
+		$('.popup-holder').removeClass('active');
+		e.stopPropagation();
+	});
+	$('.popup-holder').on('click','.close, .bg',function () {
+		$('.popup-holder').removeClass('active');
+	});
+}
+
+function initShowBlock(){
+	$('.map').append('<div class="line-map"></div>');
+	$('.map').append('<div class="cities-map"></div>');
+}
+function initAnimateMap(){
+	var h = $(window).height();
+
+	if ($(".tarifs-map-block-new").length){
+
+		$(window).scroll(function(){
+
+			if ( ($(this).scrollTop()+h) >= $(".map").offset().top + $(".map").height()/2) {
+				$(".line-map").fadeIn(3000);
+				$(".cities-map").eq(0).addClass('animated bounceInLeft');
+			}
+
+			if ( $(this).scrollTop() == 0 ) {
+
+				$(this).css({visibility:"hidden"});
+			}
+		});
+	}
+}
+
+$(function() {
+	var first = $(".top-nav");
+	var second = $("#nav");
+	$(window).resize(function() {
+		var w = window.innerWidth;
+		var i = $(".top-nav, #nav").index(first);
+		if (w <= "1023" && !i) {
+			var a = $("<ab/>");
+			a.insertAfter(first);
+			first.insertAfter(second);
+			second.insertAfter(a);
+			a.remove()
+		} else if (w > "1023" && i) {
+			var a = $("<ab/>");
+			a.insertAfter(first);
+			first.insertAfter(second);
+			second.insertAfter(a);
+			a.remove()
+		}
+	}).resize();
+
+	$('.gallery-item').fancybox({
+		scrolling: 'yes'
+	});
+});
+

@@ -1,0 +1,33 @@
+$(document).ready(function ()
+{
+	$('.like-box a').click(function()
+	{
+		if($(this).hasClass('disable'))
+		{
+			return false;
+		}
+		else
+		{
+			var url=$(this).attr('href');
+			$('.advantages-block .num').load(url);
+			$(this).addClass('disable');
+			return false;
+		}
+	});
+
+	$('.rate-list li a').click(function(){
+		var r=$(this).data('rating');
+		var idx=$(this).data('idx');
+		$.ajax({
+			type:"POST",
+			cache:false,
+			url:'/ajax/rating.php',
+			data: { idx:idx, r:r },
+			success:function(data)
+			{
+				$('.rate-box').html(data);
+			}
+		});
+		return false;
+	});
+});
